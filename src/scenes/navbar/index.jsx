@@ -41,8 +41,8 @@ const Navbar = () => {
     const primaryLight = theme.palette.primary.lightt;
     const alt = theme.palette.background.alt;
 
-    //const fullName = `${user.firstName} ${user.lastName}`;
-    const fullName = "";
+    const fullName = `${user.firstName} ${user.lastName}`;
+    //const fullName = "";
 
     return ( 
     <FlexBetween padding="1rem 5%" backgroundColor={alt}>
@@ -93,7 +93,7 @@ const Navbar = () => {
                     value={fullName}
                     sx={{
                         backgroundColor: neutralLight,
-                        width: "150px",
+                        width: "200px",
                         borderRaduis: "0.25rem",
                         p: "0.25rem 1rem",
                         "& .MuiSvgIcon-root": {
@@ -109,7 +109,7 @@ const Navbar = () => {
                         <MenuItem value={fullName}>
                             <Typography>{fullName}</Typography>
                         </MenuItem>
-                        <MenuItem onClick={() => dispatch(setLogout())}>Log Out</MenuItem>
+                        <MenuItem onClick={() => {dispatch(setLogout());  navigate("/") ; } }>Log Out</MenuItem>
                     </Select>
             </FormControl>
         </FlexBetween>
@@ -168,7 +168,7 @@ const Navbar = () => {
                             value={fullName}
                             sx={{
                                 backgroundColor: neutralLight,
-                                width: "150px",
+                                width: "200px",
                                 borderRaduis: "0.25rem",
                                 p: "0.25rem 1rem",
                                 "& .MuiSvgIcon-root": {
@@ -184,7 +184,7 @@ const Navbar = () => {
                                 <MenuItem value={fullName}>
                                     <Typography>{fullName}</Typography>
                                 </MenuItem>
-                                <MenuItem onClick={() => dispatch(setLogout())}>Log Out</MenuItem>
+                                <MenuItem onClick={() => {dispatch(setLogout());  navigate("/") ; } }>Log Out</MenuItem>
                             </Select>
                     </FormControl>
                 </FlexBetween>   
